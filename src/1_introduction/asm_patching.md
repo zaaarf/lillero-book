@@ -1,0 +1,4 @@
+# An introduction to ASM patching
+ASM patching means, in short, to modify the "ASM" - that is, "assembly" - of an application at runtime. Within Java, this refers to the bytecode, which is the lower-level language your Java code gets compiled to. Due to the radical nature of modifying the game, before writing a patch one should always wonder whether patching is the correct approach. That is not to say that there is never a need for patching: you should just know that many problems can be solved by other means.
+
+Though reviled by many, ASM patching remains one of the most powerful tools at your disposal when modding a game. Like every tool, ASM patching is not evil in itself, rather it depends on how one uses it; when used correctly, it can solve just about any problem elegantly and with the lowest possible footprint; when done incorrectly, it can wreak havoc on the entire environment, causing inexplicable crashes and odd incompatibilities.
