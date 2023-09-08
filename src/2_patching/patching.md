@@ -1,0 +1,6 @@
+# Patching
+Since you are applying changes to the bytecode of a class, this must necessarily happen before said class is loaded in memory. The component that applies said changes is called a *loader*; don't concern yourself on the inner workings of loaders for now, just know that they are in charge of the initial step: we'll cover them in detail in their own chapter.
+
+Suppose that you already have a working loader in place. This loader calls your *injector method*, and passes it a `ClassNode` and a `MethodNode` as arguments, representing respectively the container class and the target method. This is the most common type of ASM patching, and it's probably why you're here; more advanced subjects may be covered in additional chapters later on.
+
+At a glance, this might seem restrictive. However, do keep in mind that even code outside of methods - in field declarations, in loose blocks, or in `static` blocks - is actually considered to be part of a method by the compiler. Specifically, `<init>` for instance fields and loose blocks, and `<clinit>` for static fields and `static` blocks.
