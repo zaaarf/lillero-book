@@ -1,10 +1,12 @@
 # Why Lillero?
-As you may have gleamed from the previous chapter, I am not a fan of Mixin. I respect its engineering, which is very clever, and acknowledge the problems it attempts to solve. My problem with it is that most of those problems are symptoms of a bigger one that Mixin fails to acknowledge. 
+As you may have gleamed from the previous chapter, I am not a fan of Mixin. I respect its engineering, which is very clever, and acknowledge the problems it attempts to solve. My issue with it is that most of those problems are symptoms of a bigger one that Mixin fails to acknowledge.
 
+## The problem, the solution
 Why do people fail at making patches? The answer is lack of checks mixed with general incompetence. Mixin thus set out to make it easy. My belief, though, is that the underlying issue is a general lack of readily available information on ASM patching. The Minecraft Forge forums soon banned discussion of the topic altogether, in a misguided attempt to discourage it. Should we be surprised that people are doing it wrong, if you can't talk about the topic in one of the biggest communities that may be interested in it?
 
 [Lillero](https://github.com/zaaarf/lillero) was my alternative answer to those problems. I wrote Lillero with a clear goal in mind: it should allow you to do everything, while keeping it as comfortable as it can get this close to bare metal. When used to its full potential, Lillero is lightweight and flexible, but also easy to write. Coupled with this book, it should empower anyone to write good patches following the best possible practices.
 
+## Design
 At the heart of Lillero lies a Java interface, which any aspiring patch should implement: it will contain various methods, providing any metadata that may be needed by the loader as well as the one where the patching will happen. As we'll see, you won't have to write most of this boilerplate by hand: the [Lillero-processor](https://github.com/zaaarf/lillero-processor/) will take care of generating it.
 
 *Generating* is the keyword here: repetitive tasks aren't abstracted out, they are just made to write by the machine. One can open the generated files and easily see what each annotation does. By design, Lillero's inner workings should be clear and easy to follow for anyone wishing to learn. Should one want to dig deeper, they'll find that all code in the Lillero project is heavily documented, with a Javadoc for every last method and field, so that everything is perfectly clear to anyone wishing to learn from it.
