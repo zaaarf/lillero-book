@@ -6,7 +6,7 @@ Lillero is made up of multiple components:
 
 - [Lillero](https://github.com/zaaarf/lillero), the core library.
 - [Lillero-processor](https://github.com/zaaarf/Lillero-processor), the annotation processor.
-- [Lillero-mapper](https://github.com/zaaarf/lillero-mapper), a library which provides the ability to read multiple obfuscation mapping formats.
+- [Lillero-mapper](https://github.com/zaaarf/lillero-mapper), a library providing the ability to read multiple obfuscation mapping formats.
 - [Lillero-mapping-writer](https://github.com/zaaarf/Lillero-mapping-writer), a CLI tool for converting and inverting mapping formats.
 
 On top of these, there's [Lillero-loader](https://github.com/zaaarf/lillero-loader), a sample loader, in form of a plugin for Minecraft Forge's [ModLauncher](https://github.com/McModLauncher/modlauncher).

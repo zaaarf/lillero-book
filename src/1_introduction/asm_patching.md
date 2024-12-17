@@ -7,4 +7,4 @@ In short, ASM patching should always be the very last resort. That is not to say
 
 Though reviled by many, ASM patching remains one of the most powerful tools in the Java modder's arsenal. Like every tool, ASM patching is not evil in itself. When used correctly, it can solve just about any problem elegantly with a minuscule footprint. When done incorrectly, it can wreak havoc on the entire environment, causing inexplicable crashes and pulling the rug from underneath everyone else wishing to modify the program just like you.
 
-This latter issue has led most of the new generation of modders to reject ASM patching altogether, in favour of higher-level solutions, ditching the complexities of bytecode in favour of the checked safety of plain Java. In Minecraft's case, one such solution is [Mixin](https://github.com/SpongePowered/Mixin/).
+This latter issue has led most of the new generation of modders to reject ASM patching altogether, in favour of higher-level solutions, ditching the complexities of bytecode in favour of the relative safety of plain Java. In Minecraft's case, one such solution is [Mixin](https://github.com/SpongePowered/Mixin/).

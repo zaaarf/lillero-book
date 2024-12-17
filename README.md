@@ -8,4 +8,4 @@ In short, this is no replacement for the ASM manual: think of the Lillero Book a
 ## Building
 This is built with [mdbook](https://github.com/rust-lang/mdBook): simply install `mdbook`, clone this, and run `mdbook build` in the root folder. You'll find the compiled and static html in the `book` subfolder.
 
-You can also find a live version [here](https://lll.fantabos.co/book/), if you prefer.
+You can also find a live version [here](https://lll.zaaarf.foo/book/), if you prefer.
