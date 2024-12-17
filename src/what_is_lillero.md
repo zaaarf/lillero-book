@@ -1,11 +1,11 @@
 # What is Lillero?
 Lillero is a lightweight and simple Java ASM patching framework built on top of [ObjectWeb's ASM library](https://asm.ow2.io/).
-It can be used in conjunction with any loader that supports the ASM library's `ClassVisitor` system. 
+It can be used in conjunction with any loader that supports the ASM library's Tree API (i.e. `ClassNode` and `MethodNode`).
 
 Lillero is made up of multiple components:
 
 - [Lillero](https://github.com/zaaarf/lillero), the core library.
-- [Lillero-processor](https://github.com/zaaarf/Lillero-processor), the annotation processor.
+- [Lillero-processor](https://github.com/zaaarf/Lillero-processor), an annotation processor that generates the boilerplate for you.
 - [Lillero-mapper](https://github.com/zaaarf/lillero-mapper), a library providing the ability to read multiple obfuscation mapping formats.
 - [Lillero-mapping-writer](https://github.com/zaaarf/Lillero-mapping-writer), a CLI tool for converting and inverting mapping formats.
 

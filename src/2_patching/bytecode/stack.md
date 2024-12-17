@@ -1,0 +1,8 @@
+# Stack-oriented programming
+If you've ever attended any formal programming course, you'll be certainly familiar with the concepts of *stack* and *heap*. While working on regular Java they'll at most be an occasional passing thought, but when dealing with bytecode they become central. In fact, like most assembly languages, Java bytecode is what you'd call a [*stack-oriented* programming language](https://en.wikipedia.org/wiki/Stack-oriented_programming).
+
+The stack is a quickly-accessible memory region that follows the rule *first in, last out*. It's often compared to a stack of plates: you can only ever add (*push*) new plates on the top, and can only ever take (*pop*) the one on the very top. It's highly efficient, but anything that gets put on the stack must *have* a known memory size at compile time. This makes it suitable for working with primitives, but not quite as much for objects. Those follow different rules.
+
+When you create a new object, memory is allocated on the heap, and a *reference* to the object is pushed onto the stack. A reference is a hexadecimal number, of known and fixed size, that represents the *memory address* of the location of a certain object. The heap is a messier, but bigger place: it's slower, but it allows retrieval of values from any point and doesn't need to know the size of everything in advance. 
+
+Most bytecode instructions affect the stack in some way. Depending on the opcode, values may be *popped* from the stack and/or a return value may be *pushed* onto it. Understanding how the stack works and how to work with it are necessary steps to gaining a true understanding of bytecode.
