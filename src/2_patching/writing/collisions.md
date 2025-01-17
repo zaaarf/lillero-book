@@ -1,5 +1,5 @@
 # Mitigating Collisions
-Despite being an above average programmer, having read this book and taken all the precautions on God's green earth, the unthinkable has still happened: your patches conflict wiht someone else's. That's fine, no need to panic. It may not even have been your fault. It may be the other guy's fault, or it may be that there is no conceivable way to implement this patch in a sturdier way. Regardless, let's assume that working together with the other guy is not an option, and that you absolutely have to fix it yourself.
+Despite being an above average programmer, having read this book and taken all the precautions on God's green earth, the unthinkable has still happened: your patches conflict with someone else's. That's fine, no need to panic. It may not even have been your fault. It may be the other guy's fault, or it may be that there is no conceivable way to implement this patch in a sturdier way. Regardless, let's assume that working together with the other guy is not an option, and that you absolutely have to fix it yourself.
 
 You have a few ways to go about this.
 
@@ -11,7 +11,7 @@ In some cases, you may want to catch the `PatternNotFoundException` and re-throw
 ## Wrapping extra code
 Assuming that you did all according to this specification, you only *added* nodes, never removing them. If you did, you can simply wrap all of your additional opcodes between a call to some sort of check and an `IFNE` on one side, and a label on the other. This way, all your extra code is self-contained. Let me also remind you, once again, that the resulting JVM code doesn't necessarily have to translate to valid Java.
 
-This option may be more suitable to cases where the buggy collision happens only when certain conditions are met: this way, your code is only off when it needs to be. And, since you're *injecting* the check itself as well, you can rely on all the information you can expose at runtime.
+This option may be more suitable to cases where the buggy collision happens only when certain conditions are met: this way, your code is only executed when it needs to be. And, since you're *injecting* the check itself as well, you can rely on all the information you can expose at runtime.
 
 Typically, you'd check against the thing that you *know* is breaking your code; if you can't, for some reason, you should add some sort of setting and check against that, so the user may disable this if he knows that some other patcher he's using conflicts with it.
 
