@@ -9,8 +9,12 @@ Lillero is made up of multiple components:
 - [Lillero-mapper](https://github.com/zaaarf/lillero-mapper), a library providing the ability to read multiple obfuscation mapping formats.
 - [Lillero-mapping-writer](https://github.com/zaaarf/Lillero-mapping-writer), a CLI tool for converting and inverting mapping formats.
 
-On top of these, there's [Lillero-loader](https://github.com/zaaarf/lillero-loader), a sample loader, in form of a plugin for Minecraft Forge's [ModLauncher](https://github.com/McModLauncher/modlauncher).
-Lillero-loader is the only Minecraft-specific part of the Lillero system.
-To reiterate: while Lillero was initially developed for use with Minecraft, it really works with anything, as long as you have a loader that supports the ASM library.
+As an extra, the following loaders (aimed at Minecraft-specifically) are provided:
+- [Lillero-loader](https://github.com/zaaarf/lillero-loader), implemented as a [ModLauncher](https://github.com/McModLauncher/modlauncher) plugin.
+- [Lillero-mixin](https://github.com/zaaarf/lillero-mixin), implemented as a [Mixin](https://github.com/SpongePowered/Mixin) plugin.
+
+You should make your choice depending on which platforms you aim at supporting and on what is available in your environment. The ModLauncher implementation is more elegant, but the Mixin one provides compatibility with any system that supports Mixin.
+
+No other part of the ecosystem is exclusive to Minecraft (nor is Mixin, to be precise). It will function in any enviroment that can perform transformations based on the ASM library, but you may have to write a custom loader for it.
 
 This book will introduce you to ASM patching and provide an in-depth guide on how to use Lillero to do it in a way that is flexible and yet comfortable.
