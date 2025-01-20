@@ -26,3 +26,6 @@
 		- [Proxies](./2_patching/writing/proxies.md)
 		- [Guidelines](./2_patching/writing/guidelines.md)
 		- [Mitigating Collisions](./2_patching/writing/collisions.md)
+- [Loaders](./3_loaders/loaders.md)
+	- [Requirements](./3_loaders/requirements.md)
+	- [Example](./3_loaders/example.md)
