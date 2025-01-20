@@ -23,6 +23,6 @@ public void inject(ClassNode clazz, MethodNode method) {
 }
 ```
 
-The `insert` method added `RETURN` (which is equivalent to `return` without values) right at the start, not having specificed a position. While `javac` would refuse to compile a method like this one because it creates unreachable code, the bytecode sequence it would produce is actually perfectly valid; thus, using Lillero to create is perfectly valid. This is not the first discrepancy you will encounter between what `javac` wants you to do and what you actually can do.
+The `insert` method added `RETURN` (which is equivalent to `return` without values) right at the start, not having specificed a position. While `javac` would refuse to compile a method like this one because it creates unreachable code, the bytecode sequence it would produce is actually perfectly valid; thus, using Lillero do it is perfectly valid. This is not the first discrepancy you will encounter between what `javac` *wants* you to do and what you actually *can* do.
 
 Unfortunately, most patches are not as straightforward.

@@ -24,7 +24,7 @@ This is why you need **pattern matching**. It is a feature of Lillero and the pr
 Assuming that you can now reach any position in the method and add new opcodes in it (we'll see how in a minute), we now have to wonder about how, exactly, we can implement this change. Here are three examples:
 
 - Disable or nullify the decrementing in some way.
-	- This might be ideal in some circumstances; it's could certainly be the least invasive option, depending on how you implement it. However, it's likely not going to be the most efficient one.
+	- This might be ideal in some circumstances; it could certainly be the least invasive option, depending on how you implement it. However, it's likely not going to be the most efficient one.
 
 - Delete the decrementing altogether.
 	- Don't do this. Deleting opcodes, especially more than one, is extremely invasive and fragile.
@@ -32,7 +32,7 @@ Assuming that you can now reach any position in the method and add new opcodes i
 - Rig the if check so that it will never be false.
 	- This is the most efficient option. It might be more or less invasive that the first one, depending on how you implement it, but people shouldn't be matching against whole blocks anyway unless they intend to change them entirely.
 
-Speaking strictly of the best solution, I would personally choose the third one: it's elegant, efficient and unlikely to fail. Just add a `POP` and an `ICONST_0` before the `IFNE` call. However, for the purposes of our pattern matching example, let's assume that we chose to proceed with the first one. Once again, there are multiple approaches we can consider. Here are few: 
+Speaking strictly of the best solution, I would personally choose the third one: it's elegant, efficient and unlikely to fail. Doing that is as simple as adding a `POP` and an `ICONST_0` before the `IFNE` call. However, for the purposes of our pattern matching example, let's assume that we chose to proceed with the first one. Once again, there are multiple approaches we can consider. Here are few: 
 
 - Immediately increment the value after decrementing it.
 	- This is the least invasive option. It has a performance hit compared to the original, but if you don't care about that (it's very negligible), it will quietly undo the decrement probably without bothering other patchers. However, I would argue that it's quite fragile, as its outcome depends on a previous state; I would not recommend this.
