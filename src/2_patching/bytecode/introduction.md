@@ -5,4 +5,4 @@ Essentially, any programming language *targeting* the JVM (short for Java Virtua
 
 *Java bytecode* is a human-readable representation of the machine code that the JVM is meant to interpret. With the right tools, it can be manipulated to change the behaviour of a program - which brings us here. Java bytecode is relatively high-level when compared to its native counterpart, including support for more abstract concepts like classes and inheritance, but still requires a way of thinking much closer to the functioning of a machine than what is needed for regular programming.
 
-Bytecode instructions are made up of various parts; first comes the *opcode*, a numerical ID (though you work with human-readable aliases for these numbers) then come a number of arguments which may vary depending on the opcode.
+Bytecode instructions are made up of various parts; first comes the *opcode*, a numerical ID (though you work with human-readable aliases for these numbers), and then come a number of arguments which may vary depending on the opcode.
